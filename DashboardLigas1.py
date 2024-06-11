@@ -6,7 +6,6 @@ import dash_bootstrap_components as dbc
 from dash import dcc, html, dash_table, callback, Input, Output
 
 
-# Conexión a la base de datos MySQL
 def get_data(liga):
     connection = mysql.connector.connect(
         host='localhost',
@@ -31,7 +30,6 @@ laliga_df = get_data('La Liga')
 seriea_df = get_data('Serie A')
 premier_df = get_data('Premier League')
 
-# Combinar los datos en un solo DataFrame
 combined_df = pd.concat([laliga_df, seriea_df, premier_df])
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
