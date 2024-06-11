@@ -6,7 +6,6 @@ import dash_bootstrap_components as dbc
 from dash import dcc, html, dash_table, callback, Input, Output
 
 
-# Conexión a la base de datos MySQL
 def get_data(liga):
     connection = mysql.connector.connect(
         host='localhost',
